@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="ju.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-size: 36px;">Will You Be My Valentine?</h1>
+    </header>
+
+    <main>
+        <p style="font-style: italic;">Dear My lalove,</p>
+        <p>I have something special to ask...</p>
+        <p style="font-weight: bold; color: #d32f2f; font-size: 24px;">Will you be my Valentine, my love?</p>
+        
+        <button onclick="enlargeYes()" id="yesButton">Yes</button>
+        <button onclick="sadMessage()">No</button>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ by Your loving boyfriend</p>
+    </footer>
+
+    <script>
+        let enlargementCount = 1;
+        let isYesClicked = false;
+
+        function enlargeYes() {
+            if (!isYesClicked) {
+                const yesButton = document.getElementById('yesButton');
+                yesButton.classList.add('enlarge');
+                yesButton.style.fontSize = '24px'; // Set the final size
+
+                // Sweet ending message when "Yes" is clicked
+                alert('yeheyyy mwamwa baby ko thankyou ❤️');
+                document.body.innerHTML = '<h1 style="color: #d32f2f;">Thank you for being my Valentine my baby! ❤️</h1>';
+                isYesClicked = true;
+            }
+        }
+
+        function sadMessage() {
+            const sadMessages = [
+                'babyy wrong answer 😢',
+                'ngekk say yess plss.. 😔',
+                'heyy you know that is wrong answer righ?... 💔',
+                'lovie dont say no 😞',
+                'if not you who will be my valentine??... 😞',
+                'nooooooo baby i hate u, click yes',
+                'you know the "no" option is not really an option you can pick'
+            ];
+
+            const randomMessage = sadMessages[Math.floor(Math.random() * sadMessages.length)];
+
+            alert(randomMessage);
+            if (!isYesClicked) {
+                const yesButton = document.getElementById('yesButton');
+                yesButton.style.fontSize = `${18 + enlargementCount * 10}px`; // Adjust the increment value
+                enlargementCount++;
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

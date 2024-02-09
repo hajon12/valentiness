@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #ffebee; /* Light red background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d32f2f; /* Darker red for header */
+    color: white;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #333; /* Dark text color */
+}
+
+button {
+    background-color: #d32f2f; /* Darker red for buttons */
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #b71c1c; /* Even darker red on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+button.enlarge {
+    transition: none; /* Disable transition after initial click */
+}
+
+footer {
+    background-color: #d32f2f; /* Darker red for footer */
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
